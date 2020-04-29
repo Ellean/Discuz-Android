@@ -73,7 +73,7 @@ function onRefresh(JSON){
 		});
 
 		if(!textIsNull(JSON.Variables.postlist[0].attachments)){ //帖子图片附件
-           var str = "http://wsq.demo.comsenz-service.com/";
+           var str = "http://zxsub.com/";
            var aid = "";
          var strlist = JSON.Variables.postlist[0].attachments;
            $(".thread_details .attachlist").removeAttr("hidden");
@@ -217,7 +217,7 @@ function onLoadReply(JSON,isAppend){
             ul.removeAttr("hidden");
             ul.append(li);
             $(".thread_reply .attachlist").removeAttr("hidden");
-			 var commendStr = "http://wsq.demo.comsenz-service.com/";
+			 var commendStr = "http://zxsub.com/";
             var attach = postlistitem.attachments;
             if(!textIsNull(attach)){
                  li.find(".attachlist").removeAttr("hidden");

@@ -1,4 +1,4 @@
-﻿var HOST="http://wsq.demo.comsenz-service.com/";
+﻿var HOST="http://zxsub.com/";
 //var HOST="http://bbs.rednet.cn/";
 var isMultiSelected=true;
 var maxChoices=2;
@@ -90,7 +90,7 @@ $(document).ready(function(){
 		$(".thread_details .attachlist img").css({"width":"0px","height":"0px"});
 		$(".thread_details .attachlist").removeAttr("hidden");
 //		var attachlist=JSON.Variables.postlist[0].attchlist;
-		 var str = "http://wsq.demo.comsenz-service.com/";
+		 var str = "http://zxsub.com/";
          var aid = "";
          var strlist = JSON.Variables.postlist[0].attachments;
                    for(var key in strlist){
@@ -195,7 +195,7 @@ function onLoadReply(JSON,isAppend){
 			li.find("div.P_share div.naTime_02 label.time").html(postlistitem.dateline);
 			li.find("div.P_share div .a").click(function(){discussUser($(this).parents("li").attr("pid"));});
             li.find("div.P_share div .b").click(function(){reportComment($(this).parents("li").attr("pid"));});
-             var commendStr = "http://wsq.demo.comsenz-service.com/";
+             var commendStr = "http://zxsub.com/";
              var attach = postlistitem.attachments;
              if(!textIsNull(attach)){
                   li.find(".attachlist img").css({"width":"0px","height":"0px"});

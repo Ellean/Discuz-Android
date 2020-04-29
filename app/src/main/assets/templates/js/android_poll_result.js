@@ -1,4 +1,4 @@
-var HOST="http://wsq.demo.comsenz-service.com/";
+var HOST="http://zxsub.com/";
 //var HOST="http://bbs.rednet.cn/";
 var isLoadReplyOver=false;//是否所有评论已加载完毕
 var	is2GOr3GLoadImgs=true;//2/3G网络是否加载图片
@@ -105,7 +105,7 @@ $(document).ready(function(){
 		var item=pollResultList.find("li:first").clone();
 		if(imgPid!==undefined&&imgPid.length>0){
 			item.find(".ui-poll-img").removeAttr("hidden");
-			item.find(".ui-poll-img img").attr("src","http://wsq.demo.comsenz-service.com/"+pollOption.imginfo.small);
+			item.find(".ui-poll-img img").attr("src","http://zxsub.com/"+pollOption.imginfo.small);
 			$(".ui-poll-img img").click(is2GOr3GLoadImgs?function(){threadThumbsClick($(this).attr("src"));}:null)
                 		.attr(is2GOr3GLoadImgs?"src":"hidden",is2GOr3GLoadImgs?$(this).attr("src"):"hidden")
                 		.css({"width":"auto","height":"auto"});
@@ -170,7 +170,7 @@ function onLoadReply(JSON,isAppend){
            if(!textIsNull(attach)){
             li.find(".attachlist img").css({"width":"0px","height":"0px"});
             li.find(".attachlist").removeAttr("hidden");
-            var commendStr = "http://wsq.demo.comsenz-service.com/";
+            var commendStr = "http://zxsub.com/";
             for(var key in attach){
               var commendImgUrl = commendStr + attach[key].url;
               commendImgUrl = commendImgUrl + attach[key].attachment;

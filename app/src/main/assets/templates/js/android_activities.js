@@ -1,4 +1,4 @@
-var HOST="http://wsq.demo.comsenz-service.com/";
+var HOST="http://zxsub.com/";
 //var HOST="http://10.0.6.58/";
 var	isLoadReplyOver=false;//是否所有评论已加载完毕
 var	is2GOr3GLoadImgs=true;//2/3G网络是否加载图片
@@ -164,7 +164,7 @@ function onLoadReply(JSON,isAppend){
 			li.find("div.P_share div .a").click(function(){discussUser($(this).parents("li").attr("pid"));});
             li.find("div.P_share div .b").click(function(){reportComment($(this).parents("li").attr("pid"));});
 
-             var commendStr = "http://wsq.demo.comsenz-service.com/";
+             var commendStr = "http://zxsub.com/";
                         var attach = postlistitem.attachments;
                         if(!textIsNull(attach)){
                         li.find(".attachlist img").css({"width":"0px","height":"0px"});
