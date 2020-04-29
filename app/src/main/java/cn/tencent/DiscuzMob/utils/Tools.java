@@ -605,7 +605,7 @@ public class Tools {
         // 设置名字
         shortcut.putExtra(Intent.EXTRA_SHORTCUT_NAME, mContext.getResources().getString(R.string.app_name));
         // 设置图标
-        shortcut.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, Intent.ShortcutIconResource.fromContext(mContext, R.drawable.ic_launcher));
+        shortcut.putExtra(Intent.EXTRA_SHORTCUT_ICON_RESOURCE, Intent.ShortcutIconResource.fromContext(mContext, R.mipmap.ic_launcher));
         // 设置意图和快捷方式关联程序
         shortcut.putExtra(Intent.EXTRA_SHORTCUT_INTENT, new Intent(mContext, mContext.getClass()).setAction(Intent.ACTION_MAIN));
         // 发送广播
