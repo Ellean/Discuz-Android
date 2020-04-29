@@ -53,7 +53,7 @@
         tools:replace="Android:icon, android:theme">
         <provider
             android:name="android.support.v4.content.FileProvider"
-            android:authorities="com.zslt.takephoto.fileprovider"
+            android:authorities="one.younnt.out.zxsub.forum"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data
