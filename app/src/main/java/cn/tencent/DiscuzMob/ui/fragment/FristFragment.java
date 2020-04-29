@@ -72,15 +72,8 @@ public class FristFragment extends BaseFragment implements View.OnClickListener,
         View view = inflater.inflate(R.layout.fragment_frist, container, false);
         tv_recommend = (TextView) view.findViewById(R.id.tv_recommend);
 //        tv_live = (TextView) view.findViewById(R.id.tv_live);
-        tv_footprint = (TextView) view.findViewById(R.id.tv_footprint);
-        view_recommend = view.findViewById(R.id.view_recommend);
 //        view_live = view.findViewById(R.id.view_live);
-        view_footprint = view.findViewById(R.id.view_footprint);
-        tv_recommend.setOnClickListener(this);
 //        tv_live.setOnClickListener(this);
-        tv_footprint.setOnClickListener(this);
-        tv_recommend.setClickable(true);
-        tv_recommend.setSelected(true);
         return view;
     }
 
@@ -141,15 +134,6 @@ public class FristFragment extends BaseFragment implements View.OnClickListener,
 //                view_footprint.setVisibility(View.INVISIBLE);
 //                show(R.id.popupwindow_item02_name);
 //                break;
-            case R.id.tv_footprint:
-                tv_footprint.setSelected(true);
-                view_footprint.setVisibility(View.VISIBLE);
-//                tv_live.setSelected(false);
-//                view_live.setVisibility(View.INVISIBLE);
-                tv_recommend.setSelected(false);
-                view_recommend.setVisibility(View.INVISIBLE);
-                show(R.id.popupwindow_item03_name);
-                break;
         }
     }
 

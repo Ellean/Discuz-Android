@@ -27,7 +27,7 @@
     <string name="menu_title">掌上论坛</string>
     <string name="menu_me">个人中心</string>
     <string name="my">我的</string>
-    <string name="frist_page">发现</string>
+    <string name="frist_page">首页</string>
     <string name="xlistview_header_hint_normal">下拉刷新</string>
     <string name="xlistview_header_hint_ready">松开刷新数据</string>
     <string name="xlistview_header_hint_loading">正在加载...</string>

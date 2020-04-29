@@ -59,7 +59,7 @@ public class ToolbarActivity extends BaseActivity {
                 discovery.setOnClickListener(this);
                 mCurrentFlag = flag;
             }
-            title.setText("发现");
+            title.setText("首页");
             title.setOnClickListener(null);
         }
 
