@@ -22,9 +22,3 @@ JDK:1.8.0_202
     1. 主题色blue
     2. 相关图标替换，包含ic_launcher, splash在内
 4. string.xml > app_name
-
-
-## 问题反馈
-https://bbs.comsenz-service.com/forum-58-1.html
-
-
