@@ -11,6 +11,16 @@
         android:background="@color/background"
         android:orientation="horizontal">
 
+        <TextView
+            android:id="@+id/sign"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:layout_marginStart="5dp"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="签到" />
+
         <ImageView
             android:id="@+id/message"
             android:layout_width="wrap_content"

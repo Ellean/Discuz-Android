@@ -2,11 +2,13 @@ package cn.tencent.DiscuzMob.ui.activity;
 
 import android.content.Intent;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import cn.tencent.DiscuzMob.R;
 import cn.tencent.DiscuzMob.base.BaseActivity;
+import cn.tencent.DiscuzMob.utils.LogUtils;
 import cn.tencent.DiscuzMob.utils.RednetUtils;
 
 /**
@@ -30,7 +32,7 @@ public class ToolbarActivity extends BaseActivity {
         public static final int DEFAULTS = SHOW_LOGO | SHOW_TITLE | SHOW_SET;
 
         public ImageView message, settings, arrow, discovery;
-        public TextView title;
+        public TextView title, sign;
 
         private int mCurrentFlag = -1;
         ToolbarActivity mActivity;
@@ -42,6 +44,7 @@ public class ToolbarActivity extends BaseActivity {
             message = (ImageView) activity.findViewById(R.id.message);
             settings = (ImageView) activity.findViewById(R.id.settings);
             discovery = (ImageView) activity.findViewById(R.id.discovery);
+            sign = (TextView) activity.findViewById(R.id.sign);
             message.setVisibility(View.GONE);
         }
 
@@ -57,6 +60,7 @@ public class ToolbarActivity extends BaseActivity {
                 message.setOnClickListener(this);
                 settings.setOnClickListener(this);
                 discovery.setOnClickListener(this);
+                sign.setOnClickListener(this);
                 mCurrentFlag = flag;
             }
             title.setText("首页");
@@ -79,6 +83,13 @@ public class ToolbarActivity extends BaseActivity {
                 case R.id.settings:
                     mActivity.startActivity(new Intent(mActivity, GeneralSettingsActivity.class));
                     break;
+
+                case R.id.sign:
+                    Intent intent = new Intent(mActivity, SimpleWebActivity.class);
+                    intent.putExtra("title", "签到");
+                    intent.putExtra("url", "http://zxsub.com/plugin.php?id=dsu_paulsign%3Asign&mobile=2&forcemobile=1");
+                    intent.putExtra("fromIndex", false);
+                    mActivity.startActivity(intent);
             }
         }
 
