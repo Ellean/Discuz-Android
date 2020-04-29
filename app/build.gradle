@@ -15,7 +15,7 @@ android {
     }
     compileSdkVersion 26
     defaultConfig {
-        applicationId 'cn.tencent.DiscuzMob'
+        applicationId 'com.zxsub.forum'
 //        applicationId 'cn.bbs.rednet'
         minSdkVersion 19
         targetSdkVersion 26
