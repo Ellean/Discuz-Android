@@ -3,6 +3,7 @@ package cn.tencent.DiscuzMob.ui.activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.text.TextUtils;
 import android.util.Log;
@@ -58,6 +59,7 @@ import cn.tencent.DiscuzMob.ui.adapter.ForumListAdaper;
 import cn.tencent.DiscuzMob.ui.adapter.ListDataAdapter;
 import cn.tencent.DiscuzMob.ui.adapter.RecommendAdapter;
 import cn.tencent.DiscuzMob.ui.adapter.TopAdapter;
+import cn.tencent.DiscuzMob.ui.fragment.mynews.RewardFragment;
 import cn.tencent.DiscuzMob.utils.DensityUtil;
 import cn.tencent.DiscuzMob.utils.LogUtils;
 import cn.tencent.DiscuzMob.utils.RednetUtils;
@@ -308,7 +310,7 @@ public class ForumListActivity extends BaseActivity implements View.OnClickListe
 
                 break;
 
-            case R.id. ll_vote:
+            case R.id.ll_vote:
 
                 backgroundAlpha(1f);
                 if (mPopWindow != null) {
@@ -712,7 +714,9 @@ public class ForumListActivity extends BaseActivity implements View.OnClickListe
                                 strings.clear();
                                 if (null != Variables.get("groupiconid")) {
                                     for (Map.Entry<String, Object> entry : ((JSONObject) Variables.get("groupiconid")).entrySet()) {
-                                        strings.put(entry.getKey(), entry.getValue().toString());
+                                        if (null != entry.getValue()) {
+                                            strings.put(entry.getKey(), entry.getValue().toString());
+                                        }
                                     }
                                 }
                                 JSONObject threadtypes = Variables.getJSONObject("threadtypes");
@@ -885,7 +889,7 @@ public class ForumListActivity extends BaseActivity implements View.OnClickListe
                                     if (null != groupiconid) {
                                         for (Map.Entry<String, Object> entry : ((JSONObject) groupiconid).entrySet()) {
 
-                                            if (!strings.containsKey(entry.getKey())) {
+                                            if (!strings.containsKey(entry.getKey()) && null != entry.getValue()) {
                                                 strings.put(entry.getKey(), entry.getValue().toString());
                                             }
                                         }
@@ -987,7 +991,7 @@ public class ForumListActivity extends BaseActivity implements View.OnClickListe
             } else {
                 ll_ordinary.setVisibility(View.GONE);
             }
-        }else{
+        } else {
             ll_ordinary.setVisibility(View.GONE);
         }
         if (!StringUtil.isEmpty(allowpostactivity)) {
@@ -997,7 +1001,7 @@ public class ForumListActivity extends BaseActivity implements View.OnClickListe
             } else {
                 ll_activity.setVisibility(View.GONE);
             }
-        }else{
+        } else {
             ll_activity.setVisibility(View.GONE);
         }
         if (!StringUtil.isEmpty(allowpostpoll)) {
@@ -1007,12 +1011,12 @@ public class ForumListActivity extends BaseActivity implements View.OnClickListe
             } else {
                 ll_vote.setVisibility(View.GONE);
             }
-        }else{
+        } else {
             ll_vote.setVisibility(View.GONE);
         }
-        if (h==1){
+        if (h == 1) {
             mPopWindow.setHeight(DensityUtil.dip2px(this, h * 90));
-        }else {
+        } else {
             mPopWindow.setHeight(DensityUtil.dip2px(this, h * 70));
         }
 
@@ -1022,7 +1026,7 @@ public class ForumListActivity extends BaseActivity implements View.OnClickListe
             } else {
                 ll_debate.setVisibility(View.GONE);
             }
-        }else{
+        } else {
             ll_debate.setVisibility(View.GONE);
         }
         tv_close.setOnClickListener(this);
